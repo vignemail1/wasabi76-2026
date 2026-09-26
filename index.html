@@ -1,0 +1,50 @@
+<!doctype html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Menu et informations du restaurant japonais Wasabi 76.">
+  <title>Wasabi 76 — Restaurant japonais</title>
+  <style>
+    :root { color-scheme: light; --ink: #25231f; --muted: #6e6a63; --accent: #a52f27; --paper: #fffdf8; --line: #e9e3d9; }
+    * { box-sizing: border-box; }
+    body { margin: 0; font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; color: var(--ink); background: var(--paper); line-height: 1.55; }
+    header { padding: 3.5rem 1rem 2.5rem; text-align: center; color: white; background: linear-gradient(135deg, #24221e, #514238); }
+    header h1 { margin: 0; font-size: clamp(2.4rem, 7vw, 4rem); letter-spacing: .04em; }
+    header p { margin: .5rem 0 0; color: #f1e8da; }
+    nav { position: sticky; top: 0; z-index: 2; display: flex; gap: .5rem; overflow-x: auto; padding: .75rem 1rem; background: #fff; border-bottom: 1px solid var(--line); }
+    nav a { flex: 0 0 auto; padding: .45rem .75rem; color: var(--accent); text-decoration: none; border: 1px solid var(--line); border-radius: 99px; font-size: .9rem; }
+    main { width: min(900px, 100% - 2rem); margin: 2rem auto 4rem; }
+    .intro { color: var(--muted); text-align: center; margin-bottom: 2rem; }
+    section { margin: 2.5rem 0; scroll-margin-top: 5rem; }
+    h2 { padding-bottom: .5rem; color: var(--accent); border-bottom: 2px solid var(--line); }
+    .plat { display: flex; justify-content: space-between; gap: 1rem; padding: .9rem 0; border-bottom: 1px solid var(--line); }
+    .plat strong { display: block; }
+    .plat small { display: block; color: var(--muted); margin-top: .2rem; }
+    .prix { white-space: nowrap; font-weight: 700; }
+    .contact { padding: 1.25rem; background: #f5f0e8; border-radius: .75rem; }
+    .contact p { margin: .35rem 0; }
+    footer { padding: 1.5rem; text-align: center; color: var(--muted); border-top: 1px solid var(--line); font-size: .9rem; }
+    @media (max-width: 520px) { header { padding: 2.5rem 1rem; } .plat { gap: .6rem; } }
+  </style>
+  <script defer src="site.js"></script>
+  <script defer src="menu.js"></script>
+  <script defer src="app.js"></script>
+</head>
+<body>
+  <header>
+    <h1 id="titre">Wasabi 76</h1>
+    <p id="sous-titre">Restaurant japonais</p>
+  </header>
+  <nav id="navigation" aria-label="Catégories du menu"></nav>
+  <main>
+    <p class="intro" id="description"></p>
+    <div id="menu"></div>
+    <section aria-labelledby="contact-title">
+      <h2 id="contact-title">Nous trouver</h2>
+      <div class="contact" id="contact"></div>
+    </section>
+  </main>
+  <footer id="pied-page"></footer>
+</body>
+</html>
