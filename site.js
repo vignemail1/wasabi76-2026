@@ -1,16 +1,15 @@
-/* Informations générales du site. Compléter les coordonnées à partir des sources officielles. */
-window.WASABI_SITE = {
-  titre: "Wasabi 76",
-  sousTitre: "Restaurant japonais",
-  description: "Découvrez notre menu de spécialités japonaises.",
-  url: "https://wasabi76.fr",
-  contact: {
-    adresse: "34 bis place Hôtel de ville, 76300 Sotteville-lès-rouen",
-    telephone: "À compléter",
-    email: "À compléter",
-    horaires: "À compléter",
-    transport: "arrêt metrobus : Hôtel de ville"
+const site = {
+  title: "Wasabi 76",
+  website: "www.wasabi76.fr",
+  address: "34 bis place Hôtel de ville, 76300 Sotteville-lès-Rouen",
+  transit: "Arrêt metrobus : Hôtel de ville",
+  hours: {
+    lunch: "11h30 à 14h30",
+    dinner: "18h30 à 22h30",
+    closedLunch: "samedi et dimanche",
+    note: "Ouvert tous les jours, sauf samedi et dimanche midi."
   },
-  devise: "EUR",
-  langue: "fr"
+  messages: [
+    "Pour les plats à emporter, la maison offre une bière japonaise à partir de 20 € d’achat."
+  ]
 };
