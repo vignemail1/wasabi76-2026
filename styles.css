@@ -1,0 +1,183 @@
+:root {
+  color-scheme: light;
+  --ink: #25231f;
+  --muted: #6e6a63;
+  --accent: #a52f27;
+  --paper: #fffdf8;
+  --surface: #f5f0e8;
+  --line: #e9e3d9;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  color: var(--ink);
+  background: var(--paper);
+  font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  line-height: 1.55;
+}
+
+header {
+  padding: 2.75rem 1rem 2rem;
+  color: white;
+  text-align: center;
+  background: linear-gradient(135deg, #24221e, #514238);
+}
+
+header h1 {
+  margin: 0;
+  font-size: clamp(2.4rem, 12vw, 4rem);
+  letter-spacing: 0.04em;
+}
+
+header p {
+  margin: 0.5rem 0 0;
+  color: #f1e8da;
+}
+
+nav {
+  position: sticky;
+  top: 0;
+  z-index: 2;
+  display: flex;
+  gap: 0.5rem;
+  overflow-x: auto;
+  padding: 0.75rem 1rem;
+  background: rgb(255 255 255 / 96%);
+  border-bottom: 1px solid var(--line);
+  scrollbar-width: thin;
+}
+
+nav a {
+  flex: 0 0 auto;
+  padding: 0.45rem 0.75rem;
+  color: var(--accent);
+  text-decoration: none;
+  border: 1px solid var(--line);
+  border-radius: 99px;
+  font-size: 0.9rem;
+}
+
+nav a:focus-visible,
+a:focus-visible {
+  outline: 3px solid #e5a39d;
+  outline-offset: 2px;
+}
+
+main {
+  width: min(900px, calc(100% - 2rem));
+  margin: 2rem auto 4rem;
+}
+
+.intro {
+  margin-bottom: 2rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+section {
+  margin: 2.5rem 0;
+  scroll-margin-top: 5rem;
+}
+
+h2 {
+  padding-bottom: 0.5rem;
+  color: var(--accent);
+  border-bottom: 2px solid var(--line);
+}
+
+.plat {
+  display: grid;
+  grid-template-columns: 3.5rem minmax(0, 1fr) auto;
+  gap: 0.75rem;
+  align-items: center;
+  padding: 0.9rem 0;
+  border-bottom: 1px solid var(--line);
+}
+
+.plat strong {
+  display: block;
+  overflow-wrap: anywhere;
+}
+
+.plat small {
+  display: block;
+  margin-top: 0.2rem;
+  color: var(--muted);
+}
+
+.plat-media {
+  display: grid;
+  place-items: center;
+  width: 3.5rem;
+  height: 3.5rem;
+  overflow: hidden;
+  color: var(--muted);
+  background: var(--surface);
+  border: 1px dashed #d6cbbb;
+  border-radius: 0.5rem;
+  font-size: 0.65rem;
+  line-height: 1.1;
+  text-align: center;
+}
+
+.plat-media span {
+  max-width: 3rem;
+}
+
+.plat-media img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.prix {
+  white-space: nowrap;
+  font-weight: 700;
+}
+
+.contact {
+  padding: 1.25rem;
+  background: var(--surface);
+  border-radius: 0.75rem;
+}
+
+.contact p {
+  margin: 0.35rem 0;
+  overflow-wrap: anywhere;
+}
+
+.contact a {
+  color: var(--accent);
+}
+
+footer {
+  padding: 1.5rem;
+  color: var(--muted);
+  text-align: center;
+  border-top: 1px solid var(--line);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 640px) {
+  header {
+    padding: 3.5rem 1rem 2.5rem;
+  }
+
+  .plat {
+    grid-template-columns: 4rem minmax(0, 1fr) auto;
+    gap: 1rem;
+  }
+
+  .plat-media {
+    width: 4rem;
+    height: 4rem;
+  }
+}

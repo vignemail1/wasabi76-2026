@@ -29,6 +29,14 @@
     category.plats.forEach((dish) => {
       const row = document.createElement('article');
       row.className = 'plat';
+      const media = document.createElement('div');
+      media.className = 'plat-media';
+      media.setAttribute('aria-hidden', 'true');
+      const placeholder = document.createElement('span');
+      placeholder.textContent = 'Image à venir';
+      media.append(placeholder);
+      row.append(media);
+
       const details = document.createElement('div');
       const name = dish.code ? `${dish.code} — ${dish.description}` : dish.nom;
       const title = document.createElement('strong');
@@ -70,6 +78,7 @@
   addLine('Téléphone', site.contact.telephone, `tel:${(site.contact.telephone || '').replace(/[^+\d]/g, '')}`);
   addLine('Email', site.contact.email, `mailto:${site.contact.email || ''}`);
   addLine('Horaires', site.contact.horaires);
+  addLine('Accès', site.contact.transport);
   if (!contact.childElementCount) contact.textContent = 'Coordonnées à renseigner.';
   document.querySelector('#pied-page').textContent = `© ${new Date().getFullYear()} ${site.titre}`;
 })();

@@ -5,10 +5,11 @@ window.WASABI_SITE = {
   description: "Découvrez notre menu de spécialités japonaises.",
   url: "https://wasabi76.fr",
   contact: {
-    adresse: "À compléter",
+    adresse: "34 bis place Hôtel de ville, 76300 Sotteville-lès-rouen",
     telephone: "À compléter",
     email: "À compléter",
-    horaires: "À compléter"
+    horaires: "À compléter",
+    transport: "arrêt metrobus : Hôtel de ville"
   },
   devise: "EUR",
   langue: "fr"
